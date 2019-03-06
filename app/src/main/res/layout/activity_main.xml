@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/screenName"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvSurvey"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/screenName"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvSurvey"
+        android:layout_marginLeft="10dp"
+        android:text="@string/name"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+    <TextView
+        android:id="@+id/tvAge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvName"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="23dp"
+        android:text="@string/age"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+    <TextView
+        android:id="@+id/tvQualification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvAge"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="23dp"
+        android:text="@string/qualification"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+    <TextView
+        android:id="@+id/tvResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text=""
+
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        android:textColor="@color/colorAccent" />
+
+    <EditText
+        android:id="@+id/editTextName"
+        android:layout_width="304dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvSurvey"
+        android:layout_alignTop="@+id/tvName"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="46dp"
+        android:layout_marginTop="-1dp"
+        android:layout_marginRight="10dp"
+        android:layout_toRightOf="@+id/tvName"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="" />
+
+    <EditText
+        android:id="@+id/editTextQualification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextName"
+        android:layout_alignTop="@+id/tvQualification"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_toRightOf="@+id/tvQualification"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="" />
+
+    <Spinner
+        android:id="@+id/spinnerAge"
+        android:layout_width="306dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextName"
+        android:layout_alignTop="@id/tvAge"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginRight="10dp"
+        android:layout_toRightOf="@+id/tvAge"
+        android:dropDownWidth="wrap_content"
+        android:entries="@array/ageArray"
+        android:spinnerMode="dropdown" />
+
+    <Button
+        android:id="@+id/buttonSave"
+        android:layout_width="78dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextQualification"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="12dp"
+        android:layout_toLeftOf="@+id/buttonClear"
+        android:background="@color/colorPrimary"
+        android:text="@string/save"
+        android:textColor="@android:color/background_light" />
+
+    <Button
+        android:id="@+id/buttonClear"
+        android:layout_width="123dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextQualification"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/colorPrimary"
+        android:text="@string/clear"
+        android:textColor="@android:color/background_light" />
+
+</RelativeLayout>
